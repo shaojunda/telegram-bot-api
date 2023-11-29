@@ -37,6 +37,12 @@ func (p Params) AddBool(key string, value bool) {
 	}
 }
 
+func (p Params) AddSecretToken(key string, value string) {
+	if value != "" {
+		p[key] = value
+	}
+}
+
 // AddNonZeroFloat adds a floating point value that is not zero.
 func (p Params) AddNonZeroFloat(key string, value float64) {
 	if value != 0 {

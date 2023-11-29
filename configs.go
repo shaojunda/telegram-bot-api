@@ -1164,6 +1164,7 @@ type WebhookConfig struct {
 	MaxConnections     int
 	AllowedUpdates     []string
 	DropPendingUpdates bool
+	SecretToken        string
 }
 
 func (config WebhookConfig) method() string {
